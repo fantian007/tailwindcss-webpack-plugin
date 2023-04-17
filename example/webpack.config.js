@@ -1,14 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // 需要 link
-const TailwindCssWebpackPlugin = require('@sprit/tailwindcss-webpack-plugin');
+const { TailwindCssWebpackPlugin } = require('@sprit/tailwindcss-webpack-plugin');
 
 /**
  * @type import('webpack').Configuration
  */
 module.exports = {
   mode: 'development',
-  entry: './index.tsx',
+  entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
@@ -28,13 +28,18 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader']
+      }
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
-    new TailwindCssWebpackPlugin.default()
+    new TailwindCssWebpackPlugin(),
   ],
   devServer: {
     static: ['./dist'],
