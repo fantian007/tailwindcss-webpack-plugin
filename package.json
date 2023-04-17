@@ -1,7 +1,12 @@
 {
   "name": "@sprit/tailwindcss-webpack-plugin",
-  "keywords": ["tailwindcss", "tailwindcss style override", "tailwindcss 样式覆盖", "tailwindcss 编译"],
-  "version": "0.1.0",
+  "keywords": [
+    "tailwindcss",
+    "tailwindcss style override",
+    "tailwindcss 样式覆盖",
+    "tailwindcss 编译"
+  ],
+  "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
