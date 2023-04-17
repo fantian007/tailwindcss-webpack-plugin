@@ -3,12 +3,15 @@ By compiling the tailwind CSS, generating the style and inserting the body indep
 
 # Usage
 ```typescript
+// esm
 import { PrettyConsoleWebpackPlugin } from '@sprit/pretty-console-webpack-plugin';
+// cjs
+const { PrettyConsoleWebpackPlugin } = require('@sprit/pretty-console-webpack-plugin');
 
 // webpack plugins
 {
   plugins: [
-    new new TailwindCssWebpackPlugin()
+    new TailwindCssWebpackPlugin()
   ]
 }
 ```
